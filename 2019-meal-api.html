@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2019-meal-api 文档说明 | api文档</title>
+    <meta name="description" content="接口文档">
+    
+    
+    <link rel="preload" href="/api-doc-html/assets/css/0.styles.f9f5c71e.css" as="style"><link rel="preload" href="/api-doc-html/assets/js/app.aee9f5d9.js" as="script"><link rel="preload" href="/api-doc-html/assets/js/2.d939bcfd.js" as="script"><link rel="preload" href="/api-doc-html/assets/js/5.27009213.js" as="script"><link rel="prefetch" href="/api-doc-html/assets/js/3.126ded9a.js"><link rel="prefetch" href="/api-doc-html/assets/js/4.ceede626.js"><link rel="prefetch" href="/api-doc-html/assets/js/6.5324c81a.js"><link rel="prefetch" href="/api-doc-html/assets/js/7.8afda27a.js">
+    <link rel="stylesheet" href="/api-doc-html/assets/css/0.styles.f9f5c71e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/api-doc-html/" class="home-link router-link-active"><!----> <span class="site-name">api文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>2019-meal-api 文档说明</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api-doc-html/2019-meal-api.html#1-实体类" class="sidebar-link">1. 实体类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#mealorderinginfo" class="sidebar-link">mealorderinginfo</a></li></ul></li><li><a href="/api-doc-html/2019-meal-api.html#注意事项:" class="sidebar-link">注意事项:</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/api-doc-html/2019-meal-api.html#响应结果" class="sidebar-link">响应结果</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#1-listresultt" class="sidebar-link">1. ListResult&lt;T&gt;</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#2-oneresultt" class="sidebar-link">2. OneResult&lt;T&gt;</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#3-operatorresult" class="sidebar-link">3. OperatorResult</a></li></ul></li><li><a href="/api-doc-html/2019-meal-api.html#1-权限相关操作" class="sidebar-link">1. 权限相关操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#11-登陆接口" class="sidebar-link">1.1 登陆接口</a></li></ul></li><li><a href="/api-doc-html/2019-meal-api.html#2-班主任营养餐上报相关" class="sidebar-link">2. 班主任营养餐上报相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#210-mealteacher" class="sidebar-link">2.1.0 meal_teacher</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#211-根据id-获取班主任上报" class="sidebar-link">2.1.1 根据id 获取班主任上报</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#212-获取班主任营养餐上报列表" class="sidebar-link">2.1.2 获取班主任营养餐上报列表</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#22-班主任营养餐上报或修改" class="sidebar-link">2.2 班主任营养餐上报或修改</a></li></ul></li><li><a href="/api-doc-html/2019-meal-api.html#3-学校相关接口" class="sidebar-link">3. 学校相关接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#31-各班级上报情况-/-未上报班级列表" class="sidebar-link">3.1 各班级上报情况 / 未上报班级列表</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#32-学校-上报/修改-营养餐" class="sidebar-link">3.2 学校 上报/修改 营养餐</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#330-mealin" class="sidebar-link">3.3.0 meal_in</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#331-学校-入库历史根据id查询" class="sidebar-link">3.3.1 学校 入库历史根据id查询</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#332-学校-入库历史列表" class="sidebar-link">3.3.2 学校 入库历史列表</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#333-学校-添加/修改入库" class="sidebar-link">3.3.3 学校 添加/修改入库</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#340-mealorderinginfo" class="sidebar-link">3.4.0 mealorderinginfo</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#341-学校-订货记录列表" class="sidebar-link">3.4.1 学校 订货记录列表</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#342-学校-添加/修改-订货记录" class="sidebar-link">3.4.2 学校 添加/修改 订货记录</a></li></ul></li><li><a href="/api-doc-html/2019-meal-api.html#4-供应商相关接口" class="sidebar-link">4. 供应商相关接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#410-mealstockschool" class="sidebar-link">4.1.0 mealstockschool</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#411-由该供货商送货的学校实时库存列表" class="sidebar-link">4.1.1 由该供货商送货的学校实时库存列表</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#420-mealstockempty" class="sidebar-link">4.2.0 mealstockempty</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#421-供应商-获取-回收学校库存列表数据" class="sidebar-link">4.2.1 供应商 获取 回收学校库存列表数据</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#422-供应商-确认回收学校库存" class="sidebar-link">4.2.2 供应商 确认回收学校库存</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#431-供应商-学校订单列表" class="sidebar-link">4.3.1 供应商 学校订单列表</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#441-供应商-确认发货" class="sidebar-link">4.4.1 供应商 确认发货</a></li></ul></li><li><a href="/api-doc-html/2019-meal-api.html#5-教育局相关接口" class="sidebar-link">5. 教育局相关接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#511-学校上报情况/未上报列表" class="sidebar-link">5.1.1 学校上报情况/未上报列表</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#520-mealstock" class="sidebar-link">5.2.0 meal_stock</a></li><li class="sidebar-sub-header"><a href="/api-doc-html/2019-meal-api.html#521-学校实时库存" class="sidebar-link">5.2.1 学校实时库存</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="2019-meal-api-文档说明">2019-meal-api 文档说明</h1> <hr> <h2 id="1-实体类">1. 实体类</h2> <h3 id="mealorderinginfo">meal_ordering_info</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;createtime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-12-31 14:23:40&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 学校名称</span>
+  <span class="token property">&quot;schollId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;孟辛庄小学&quot;</span><span class="token punctuation">,</span> 
+  <span class="token comment">// 单位</span>
+  <span class="token property">&quot;unitName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;盒&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 订货数量</span>
+  <span class="token property">&quot;num&quot;</span><span class="token operator">:</span> <span class="token number">96</span><span class="token punctuation">,</span>
+  <span class="token comment">// 合格证 图片 url</span>
+  <span class="token property">&quot;certificate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://124.239.149.12:8010/upload/6/img/微信图片_20191202143437.png&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">//产品批号</span>
+  <span class="token property">&quot;lotnum&quot;</span><span class="token operator">:</span> <span class="token string">&quot;20191208s6A2&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 配送时间</span>
+  <span class="token property">&quot;delivery_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-12-31 16:09:19&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 状态(0:未读;1.已读)</span>
+  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token comment">// 1 鸡蛋， 2 牛奶</span>
+  <span class="token property">&quot;suppliertype&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token comment">// 供应商 名称</span>
+  <span class="token property">&quot;suppliername&quot;</span><span class="token operator">:</span> <span class="token string">&quot;北京三元食品股份有限公司&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 送达日期</span>
+  <span class="token property">&quot;orderTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-02&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">//件数</span>
+  <span class="token property">&quot;piecesnum&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+  <span class="token comment">// 订货人</span>
+  <span class="token property">&quot;orderer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;王建伟&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 散装数量</span>
+  <span class="token property">&quot;bulknum&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">458</span><span class="token punctuation">,</span>
+  <span class="token comment">// 订货人电话</span>
+  <span class="token property">&quot;ordererphone&quot;</span><span class="token operator">:</span> <span class="token string">&quot;13932661276&quot;</span> 
+</code></pre></div><h2 id="注意事项:">注意事项:</h2> <ol><li>列表接口都含有 page（默认 1 ）, size（默认 10） 参数，以下接口不在列出。</li></ol> <ul><li>stime 开始查询时间</li> <li>etime 结束查询时间</li> <li>formatTime  指定具体某一天查询</li></ul> <ol start="2"><li>响应值 code 不为 0 时，代表出错，这时 msg 基本就是错误信息，前端基本不需要根据 code 的值，提示错误信息。</li> <li>{id} 选填，  :id 必填</li></ol> <h2 id="响应结果">响应结果</h2> <h3 id="1-listresultt">1. <code>ListResult&lt;T&gt;</code></h3> <ul><li>说明: 返回列表时的响应结果</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;成功&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">71</span><span class="token punctuation">,</span> <span class="token comment">// 总条数</span>
+        <span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>  <span class="token comment">// list 为 Array&lt;T&gt;,otherData 为 额外对象属性。</span>
+            T<span class="token punctuation">,</span>
+            T<span class="token punctuation">,</span>
+            T<span class="token punctuation">,</span>
+            ......
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;otherData&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="2-oneresultt">2. <code>OneResult&lt;T&gt;</code></h3> <ul><li>说明： 返回单个对象时的响应结果</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;成功&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> T <span class="token comment">// data 为 T 类型 json  对象</span>
+</code></pre></div><h3 id="3-operatorresult">3. OperatorResult</h3> <ul><li>说明: 操作成功后的响应结果(比如 添加/修改值) 只要code为0，就代表操作成功，操作失败，msg 就是错误信息。</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;成功&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="1-权限相关操作">1. 权限相关操作</h2> <h3 id="11-登陆接口">1.1 登陆接口</h3> <ul><li>地址: [post] /api/login</li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>logname</td> <td>string</td> <td>是</td></tr> <tr><td>logpwd</td> <td>string</td> <td>是</td></tr></tbody></table></li> <li>响应:</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;登录成功！&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// api_key</span>
+    <span class="token property">&quot;key&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjE3OTYsInRpbWVzdGFtcCI6MTU3Nzk1NDI4MTUwMX0.PA_zn5v0MmoaMoXSPMlPTPqtDs6I0iAmlAxdav3SdmU&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;userType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token comment">// 登陆用户名</span>
+    <span class="token property">&quot;realname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;三河市教育局&quot;</span><span class="token punctuation">,</span> 
+    <span class="token property">&quot;userinfo&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;user&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1796</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;logname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jiaoyuju&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;logpwd&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;realname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;三河市教育局&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;infoid&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;usertype&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;roleid&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;isfirst&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lastlogin&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;info&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;className&quot;</span><span class="token operator">:</span> <span class="token string">&quot;java.util.HashMap&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;cache&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;role&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 学校入库时，鸡蛋规格</span>
+    <span class="token property">&quot;eggSpec&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token comment">// 牛奶入库时，鸡蛋规格</span>
+    <span class="token property">&quot;milkSpec&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="2-班主任营养餐上报相关">2. 班主任营养餐上报相关</h2> <h3 id="210-mealteacher">2.1.0 meal_teacher</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>   <span class="token comment">// 里面的字段类似于 [2.1获取班主任营养餐上报列表](#21-获取班主任营养餐上报列表)</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">38881</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;userid&quot;</span><span class="token operator">:</span> <span class="token number">326</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;schoolid&quot;</span><span class="token operator">:</span> <span class="token number">66</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;yingdao&quot;</span><span class="token operator">:</span> <span class="token number">52</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;shidao&quot;</span><span class="token operator">:</span> <span class="token number">51</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;egg&quot;</span><span class="token operator">:</span> <span class="token number">48</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;milk&quot;</span><span class="token operator">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;year&quot;</span><span class="token operator">:</span> <span class="token number">2020</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;month&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;day&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;formatTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-02&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 上报时间</span>
+  <span class="token property">&quot;remark&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;createTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-02 14:14:57&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;stime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;etime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;className&quot;</span><span class="token operator">:</span> <span class="token string">&quot;四年级4班&quot;</span><span class="token punctuation">,</span>  <span class="token comment">// 班级名称</span>
+  <span class="token property">&quot;grade&quot;</span><span class="token operator">:</span> <span class="token number">4</span>   <span class="token comment">// 年级</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="211-根据id-获取班主任上报">2.1.1 根据id 获取班主任上报</h3> <ul><li>地址: [get] /api/report/teacher/{id}</li> <li>参数: {id} int</li> <li>响应:  data: <a href="#210-meal_teacher">meal_teacher</a></li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;成功&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// meal_teacher</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="212-获取班主任营养餐上报列表">2.1.2 获取班主任营养餐上报列表</h3> <ul><li>地址: [get] /api/report/teacher</li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>stime</td> <td>string(示例: 2020-01-16)</td> <td></td></tr> <tr><td>etime</td> <td>string(示例：2020-01-16)</td> <td></td></tr> <tr><td>formatTime</td> <td>string (示例：2020-01-16)</td> <td></td></tr></tbody></table></li> <li>响应:  list:Array&lt;<a href="#210-meal_teacher">meal_teacher</a>&gt;</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 0 为正常</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span> <span class="token comment">// success 成功</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;成功&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token comment">// 总条数</span>
+        <span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>    <span class="token comment">// 分页列表</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">38673</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;userid&quot;</span><span class="token operator">:</span> <span class="token number">543</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;schoolid&quot;</span><span class="token operator">:</span> <span class="token number">61</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;yingdao&quot;</span><span class="token operator">:</span> <span class="token number">46</span><span class="token punctuation">,</span>  <span class="token comment">// 应到</span>
+                <span class="token property">&quot;shidao&quot;</span><span class="token operator">:</span> <span class="token number">33</span><span class="token punctuation">,</span>  <span class="token comment">// 实到</span>
+                <span class="token property">&quot;egg&quot;</span><span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>   <span class="token comment">// 鸡蛋食用数量</span>
+                <span class="token property">&quot;milk&quot;</span><span class="token operator">:</span> <span class="token number">33</span><span class="token punctuation">,</span>  <span class="token comment">// 牛奶食用数量</span>
+                <span class="token property">&quot;year&quot;</span><span class="token operator">:</span> <span class="token number">2020</span><span class="token punctuation">,</span>  
+                <span class="token property">&quot;month&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;day&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formatTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-02&quot;</span><span class="token punctuation">,</span>  <span class="token comment">// 上报日期</span>
+                <span class="token property">&quot;remark&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;createTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-02 11:36:49&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;stime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;etime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;className&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1班&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;grade&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">36777</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;userid&quot;</span><span class="token operator">:</span> <span class="token number">543</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;schoolid&quot;</span><span class="token operator">:</span> <span class="token number">61</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;yingdao&quot;</span><span class="token operator">:</span> <span class="token number">46</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;shidao&quot;</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;egg&quot;</span><span class="token operator">:</span> <span class="token number">13</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;milk&quot;</span><span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;year&quot;</span><span class="token operator">:</span> <span class="token number">2019</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;month&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;day&quot;</span><span class="token operator">:</span> <span class="token number">31</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formatTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-12-31&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;remark&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;createTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-12-31 11:28:47&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;stime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;etime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;className&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1班&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;grade&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            。。。 等等
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;otherData&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="22-班主任营养餐上报或修改">2.2 班主任营养餐上报或修改</h3> <ul><li>地址: [put/post] /api/report/teacher/{id}  说明，post 和 put 都可以，只要 参数带id ，就是修改，不带id，就是新增，每天每个班主任只能上报一条。</li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>id</td> <td>修改时传递</td> <td>否</td></tr> <tr><td>formatTime</td> <td>string(示例:2019-01-01)</td> <td>是</td></tr> <tr><td>yingdao</td> <td>int(应到人数,根据接口 /api/info/rolestudent 自动获取)</td> <td>是</td></tr> <tr><td>shidao</td> <td>int 实吃人数</td> <td>是</td></tr> <tr><td>egg</td> <td>int 鸡蛋数量</td> <td>是</td></tr> <tr><td>milk</td> <td>int 牛奶数量</td> <td>是</td></tr></tbody></table></li> <li>响应:</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>  <span class="token comment">// 如果 code 不是 0，这里就是错误信息，直接提示 msg 就好</span>
+  <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="3-学校相关接口">3. 学校相关接口</h2> <h3 id="31-各班级上报情况-/-未上报班级列表">3.1 各班级上报情况 / 未上报班级列表</h3> <ul><li>地址: /api/report</li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>formatTime</td> <td>string(示例:2019-01-01)</td> <td>是</td></tr> <tr><td>userid</td> <td>int(班主任 id，接口地址: /api/info/roleteacher?all=true)</td> <td></td></tr></tbody></table></li> <li>响应:</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;成功&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">82</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>  
+            <span class="token punctuation">{</span>   <span class="token comment">// 里面的字段类似于 [2.1获取班主任营养餐上报列表](#21-获取班主任营养餐上报列表)</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">38881</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;userid&quot;</span><span class="token operator">:</span> <span class="token number">326</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;schoolid&quot;</span><span class="token operator">:</span> <span class="token number">66</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;yingdao&quot;</span><span class="token operator">:</span> <span class="token number">52</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;shidao&quot;</span><span class="token operator">:</span> <span class="token number">51</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;egg&quot;</span><span class="token operator">:</span> <span class="token number">48</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;milk&quot;</span><span class="token operator">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;year&quot;</span><span class="token operator">:</span> <span class="token number">2020</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;month&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;day&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;formatTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-02&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 上报时间</span>
+                <span class="token property">&quot;remark&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;createTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-02 14:14:57&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;stime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;etime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;className&quot;</span><span class="token operator">:</span> <span class="token string">&quot;四年级4班&quot;</span><span class="token punctuation">,</span>  <span class="token comment">// 班级名称</span>
+                <span class="token property">&quot;grade&quot;</span><span class="token operator">:</span> <span class="token number">4</span>   <span class="token comment">// 年级</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            ..............
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;otherData&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>      
+                <span class="token property">&quot;egg&quot;</span><span class="token operator">:</span> <span class="token number">3668</span><span class="token punctuation">,</span>  <span class="token comment">// 所有班级 鸡蛋食用数量</span>
+                <span class="token property">&quot;yingdao&quot;</span><span class="token operator">:</span> <span class="token number">4356</span><span class="token punctuation">,</span> <span class="token comment">// 所有班级 应到人数</span>
+                <span class="token property">&quot;shidao&quot;</span><span class="token operator">:</span> <span class="token number">4187</span><span class="token punctuation">,</span> <span class="token comment">// 所有班级 实到人数</span>
+                <span class="token property">&quot;milk&quot;</span><span class="token operator">:</span> <span class="token number">4070</span> <span class="token comment">// 所有班级 牛奶食用数量</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;notReported&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment">// 未上报班级列表</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="32-学校-上报/修改-营养餐">3.2 学校 上报/修改 营养餐</h3> <ul><li>地址: [put/post] /api/report/mealout/{id}</li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>id</td> <td>修改时传递</td> <td>否</td></tr> <tr><td>formatTime</td> <td>string(示例:2019-01-01)</td> <td>是</td></tr> <tr><td>egg</td> <td>int 学生鸡蛋食用数量</td> <td>是</td></tr> <tr><td>erkly</td> <td>int 鸡蛋入库留样数量</td> <td>是</td></tr> <tr><td>ely</td> <td>int 鸡蛋加工后留样数量</td> <td>是</td></tr> <tr><td>escpc</td> <td>int 鸡蛋试餐陪餐</td> <td>是</td></tr> <tr><td>ejgps</td> <td>int 鸡蛋加工后破损</td> <td>是</td></tr> <tr><td>eqyyb</td> <td>int 鸡蛋企业应补数量</td> <td>是</td></tr> <tr><td>milk</td> <td>int 学生牛奶食用数量</td> <td>是</td></tr> <tr><td>mrkly</td> <td>int 牛奶入库留样数量</td> <td>是</td></tr> <tr><td>mly</td> <td>int 牛奶加工后留样数量</td> <td>是</td></tr> <tr><td>mscpc</td> <td>int 牛奶试餐陪餐</td> <td>是</td></tr> <tr><td>mjgps</td> <td>int 牛奶加工后破损</td> <td>是</td></tr> <tr><td>mqyyb</td> <td>int 牛奶企业应补数量</td> <td>是</td></tr></tbody></table></li> <li>响应:</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>  <span class="token comment">// 如果 code 不是 0，这里就是错误信息，直接提示 msg 就好</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;string&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="330-mealin">3.3.0 meal_in</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">354</span><span class="token punctuation">,</span> <span class="token comment">// id 主键</span>
+  <span class="token property">&quot;userid&quot;</span><span class="token operator">:</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token comment">// user id </span>
+  <span class="token property">&quot;schoolid&quot;</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token comment">// 学校id</span>
+  <span class="token property">&quot;milk&quot;</span><span class="token operator">:</span> <span class="token number">1800</span><span class="token punctuation">,</span>  <span class="token comment">// 牛奶入库数量</span>
+  <span class="token property">&quot;mspec&quot;</span><span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span> <span class="token comment">//  牛奶规格</span>
+  <span class="token property">&quot;mspecnum&quot;</span><span class="token operator">:</span> <span class="token number">75</span><span class="token punctuation">,</span> <span class="token comment">// 牛奶箱数</span>
+  <span class="token property">&quot;mly&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">// 牛奶入库留样</span>
+  <span class="token property">&quot;mls&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 牛奶零散入库数量 </span>
+  <span class="token property">&quot;egg&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>  <span class="token comment">// 鸡蛋入库数量</span>
+  <span class="token property">&quot;espec&quot;</span><span class="token operator">:</span> <span class="token number">240</span><span class="token punctuation">,</span> <span class="token comment">// 鸡蛋规格</span>
+  <span class="token property">&quot;especnum&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 鸡蛋规格数量</span>
+  <span class="token property">&quot;ely&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>   <span class="token comment">// 鸡蛋入库留样数量</span>
+  <span class="token property">&quot;els&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">// 鸡蛋 零散数量</span>
+  <span class="token property">&quot;year&quot;</span><span class="token operator">:</span> <span class="token number">2019</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;month&quot;</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;day&quot;</span><span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;formatTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-12-24 00:00:00&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 入库日期。</span>
+  <span class="token property">&quot;remark&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;createTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-12-24 13:54:06&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;updateTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-12-24 13:54:06&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;eggInBefore&quot;</span><span class="token operator">:</span> <span class="token number">2718</span><span class="token punctuation">,</span>  <span class="token comment">// 鸡蛋入库前数量</span>
+  <span class="token property">&quot;eggInAfter&quot;</span><span class="token operator">:</span> <span class="token number">2718</span><span class="token punctuation">,</span> <span class="token comment">//  鸡蛋入库后数量</span>
+  <span class="token property">&quot;milkInBefore&quot;</span><span class="token operator">:</span> <span class="token number">949</span><span class="token punctuation">,</span> <span class="token comment">// 牛奶入库前数量</span>
+  <span class="token property">&quot;milkInAfter&quot;</span><span class="token operator">:</span> <span class="token number">2749</span><span class="token punctuation">,</span>  <span class="token comment">// 牛奶入库后数量</span>
+  <span class="token property">&quot;stime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;etime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="331-学校-入库历史根据id查询">3.3.1 学校 入库历史根据id查询</h3> <ul><li>[get] /api/report/mealin/{id}</li> <li>参数: {id} 必填， 主键id</li> <li>响应: data: <a href="#330-meal_in">3.3.0 meal_in</a></li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;成功&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// meal_in</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="332-学校-入库历史列表">3.3.2 学校 入库历史列表</h3> <ul><li><p>地址: [get] /api/report/mealin</p></li> <li><p>参数:</p> <table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>stime</td> <td>string(示例: 2020-01-16)</td> <td></td></tr> <tr><td>etime</td> <td>string(示例：2020-01-16)</td> <td></td></tr> <tr><td>formatTime</td> <td>string (示例：2020-01-16)</td> <td></td></tr></tbody></table></li> <li><p>响应:   list: [Array&lt;<a href="#330-meal_in">meal_in</a>&gt;]</p></li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;成功&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">// meal_in</span>
+            ......
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;otherData&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="333-学校-添加/修改入库">3.3.3 学校 添加/修改入库</h3> <ul><li>地址: [post/put] /api/report/mealin/{id}  id可以不填，参数带有id就是修改</li> <li>参数: 详细参考 <a href="#330-meal_in">meal_in</a> <table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>id</td> <td>int 主键，带有此参数为修改</td> <td></td></tr> <tr><td>formatTime</td> <td>string(上报日期，限当日 示例：2020-01-16)</td> <td>是</td></tr> <tr><td>egg</td> <td>int 鸡蛋数量(=鸡蛋箱数x鸡蛋规格+鸡蛋零散)</td> <td>是</td></tr> <tr><td>espec</td> <td>int 鸡蛋规格</td> <td>是</td></tr> <tr><td>especnum</td> <td>int 鸡蛋箱数</td> <td>是</td></tr> <tr><td>els</td> <td>int 鸡蛋零散</td> <td>是</td></tr> <tr><td>milk</td> <td>int 牛奶数量(=牛奶箱数x牛奶规格+牛奶零散)</td> <td>是</td></tr> <tr><td>mspec</td> <td>int 牛奶规格</td> <td>是</td></tr> <tr><td>mspecnum</td> <td>int 牛奶箱数</td> <td>是</td></tr> <tr><td>mls</td> <td>int  牛奶零散</td> <td>是</td></tr></tbody></table></li> <li>响应: <a href="#3operatorresult">OperatorResult</a></li></ul> <h3 id="340-mealorderinginfo">3.4.0 meal_ordering_info</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;createtime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-12-31 14:23:40&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 学校名称</span>
+  <span class="token property">&quot;schollId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;孟辛庄小学&quot;</span><span class="token punctuation">,</span> 
+  <span class="token comment">// 单位</span>
+  <span class="token property">&quot;unitName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;盒&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 订货数量</span>
+  <span class="token property">&quot;num&quot;</span><span class="token operator">:</span> <span class="token number">96</span><span class="token punctuation">,</span>
+  <span class="token comment">// 合格证 图片 url</span>
+  <span class="token property">&quot;certificate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://124.239.149.12:8010/upload/6/img/微信图片_20191202143437.png&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">//产品批号</span>
+  <span class="token property">&quot;lotnum&quot;</span><span class="token operator">:</span> <span class="token string">&quot;20191208s6A2&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 配送时间</span>
+  <span class="token property">&quot;delivery_time&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-12-31 16:09:19&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 状态(0:未读;1.已读)</span>
+  <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token comment">// 1 鸡蛋， 2 牛奶</span>
+  <span class="token property">&quot;suppliertype&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token comment">// 供应商 名称</span>
+  <span class="token property">&quot;suppliername&quot;</span><span class="token operator">:</span> <span class="token string">&quot;北京三元食品股份有限公司&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 送达日期</span>
+  <span class="token property">&quot;orderTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-02&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">//件数</span>
+  <span class="token property">&quot;piecesnum&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+  <span class="token comment">// 订货人</span>
+  <span class="token property">&quot;orderer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;王建伟&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 散装数量</span>
+  <span class="token property">&quot;bulknum&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">458</span><span class="token punctuation">,</span>
+  <span class="token comment">// 订货人电话</span>
+  <span class="token property">&quot;ordererphone&quot;</span><span class="token operator">:</span> <span class="token string">&quot;13932661276&quot;</span> 
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="341-学校-订货记录列表">3.4.1 学校 订货记录列表</h3> <ul><li>地址: [get] /api/info/orderding</li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>stime</td> <td>string(示例: 2020-01-16)</td> <td></td></tr> <tr><td>etime</td> <td>string(示例：2020-01-16)</td> <td></td></tr> <tr><td>formatTime</td> <td>string (示例：2020-01-16)</td> <td></td></tr></tbody></table></li> <li>响应: <a href="#1-listresultt">ListResult</a>&lt;<a href="#340-meal_ordering_info">meal_ordering_info</a>&gt;</li></ul> <h3 id="342-学校-添加/修改-订货记录">3.4.2 学校 添加/修改 订货记录</h3> <ul><li>地址: [post/put] /api/order/{id}</li> <li>参数信息:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>id</td> <td>int 主键，修改时传</td> <td></td></tr> <tr><td>orderTime</td> <td>string 送达日期 (示例: 2020-01-16)</td> <td>是</td></tr> <tr><td>supplierId</td> <td>int 供应商id ([get] /api/info/school/supplier)</td> <td>是</td></tr> <tr><td>piecesnum</td> <td>int 订货件数</td> <td>是</td></tr> <tr><td>bulknum</td> <td>int 零散数量</td> <td>是</td></tr> <tr><td>num</td> <td>int 订货总数量(piecesnum*规格+bulknum)规格从供应商接口获取</td> <td>是</td></tr> <tr><td>orderer</td> <td>string 订货人</td> <td>是</td></tr> <tr><td>ordererphone</td> <td>string 订货人电话</td> <td>是</td></tr></tbody></table></li> <li>响应信息: <a href="#3-operatorresult">OperatorResult</a></li></ul> <h2 id="4-供应商相关接口">4. 供应商相关接口</h2> <h3 id="410-mealstockschool">4.1.0 meal_stock_school</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token comment">// 鸡蛋库存</span>
+    <span class="token property">&quot;stock_egg&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;num&quot;</span><span class="token operator">:</span> <span class="token string">&quot;6883盒&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 牛奶库存</span>
+    <span class="token property">&quot;stock_milk&quot;</span><span class="token operator">:</span> <span class="token number">6883</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;schoolname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;剑桥小学&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="411-由该供货商送货的学校实时库存列表">4.1.1 由该供货商送货的学校实时库存列表</h3> <ul><li>地址: [get] /api/mealStock/school/stock</li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>schoolename</td> <td>string 学校名称</td> <td></td></tr></tbody></table></li> <li>响应: <a href="#1-listresultt">ListResult</a>&lt;<a href="#410-meal_stock_school">meal_stock_school</a>&gt;</li></ul> <h3 id="420-mealstockempty">4.2.0 meal_stock_empty</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token comment">// 主键id，</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">26</span><span class="token punctuation">,</span>
+    <span class="token comment">// 学校 id</span>
+    <span class="token property">&quot;schoolId&quot;</span><span class="token operator">:</span> <span class="token number">63</span><span class="token punctuation">,</span>
+    <span class="token comment">// 鸡蛋供应商 id</span>
+    <span class="token property">&quot;supplierIdEgg&quot;</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token comment">// 牛奶供应商 id</span>
+    <span class="token property">&quot;supplierIdMilk&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    <span class="token comment">// 学校提交 回收时间</span>
+    <span class="token property">&quot;applyTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-03 10:22:03&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;createTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-03 10:22:03&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;updateTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-03 16:18:09&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 鸡蛋 回收前</span>
+    <span class="token property">&quot;eggBefore&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+    <span class="token comment">// 牛奶回收前</span>
+    <span class="token property">&quot;milkBefore&quot;</span><span class="token operator">:</span> <span class="token number">80</span><span class="token punctuation">,</span>
+    <span class="token comment">// 鸡蛋回收数量</span>
+    <span class="token property">&quot;egg&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+    <span class="token comment">// 牛奶回收数量</span>
+    <span class="token property">&quot;milk&quot;</span><span class="token operator">:</span> <span class="token number">80</span><span class="token punctuation">,</span>
+    <span class="token comment">// 鸡蛋回收状态， 1 已回收， 0 待回收</span>
+    <span class="token property">&quot;eggState&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token comment">// 牛奶回收状态 同上</span>
+    <span class="token property">&quot;milkState&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token comment">// 鸡蛋回收后数量</span>
+    <span class="token property">&quot;eggAfter&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token comment">// 牛奶回收后数量</span>
+    <span class="token property">&quot;milkAfter&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token comment">// 学校名称</span>
+    <span class="token property">&quot;schoolname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;燕郊小学&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 鸡蛋供应商名称</span>
+    <span class="token property">&quot;eggSuppliername&quot;</span><span class="token operator">:</span> <span class="token string">&quot;三河市金源禽业有限公司&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 牛奶供应商名称</span>
+    <span class="token property">&quot;milkSuppliername&quot;</span><span class="token operator">:</span> <span class="token string">&quot;内蒙古蒙牛乳业（集团）股份有限公司&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="421-供应商-获取-回收学校库存列表数据">4.2.1 供应商 获取 回收学校库存列表数据</h3> <ul><li>地址: [get] /api/stock/empty</li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>schoolName</td> <td>string 学校名称</td> <td></td></tr> <tr><td>state</td> <td>int (1 回收成功，0 等待回收)</td> <td></td></tr></tbody></table></li> <li>响应: <a href="#1-listresultt">ListResult</a>&lt;<a href="#420-meal_stock_empty">meal_stock_empty</a>&gt;</li></ul> <h3 id="422-供应商-确认回收学校库存">4.2.2 供应商 确认回收学校库存</h3> <ul><li>地址: [put] /api/sotck/empty/:id</li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>id</td> <td>int  主键id</td> <td></td></tr> <tr><td>state</td> <td>1    <code>1代表回收成功</code></td> <td></td></tr></tbody></table></li> <li>响应结果: <a href="#3-operatorresult">OperatorResult</a></li></ul> <h3 id="431-供应商-学校订单列表">4.3.1 供应商 学校订单列表</h3> <ul><li>地址: [get] /api/supplier</li> <li>请求方式: <code>GET</code></li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>stime</td> <td>string 例如： 2020-01-05</td> <td></td></tr> <tr><td>etime</td> <td>string 例如：2020-01-08</td> <td></td></tr></tbody></table></li> <li>响应结果: <a href="_1-listresult-t">ListResult</a>&lt;<a href="#meal_ordering_info">meal_ordering_info</a>&gt;</li></ul> <h3 id="441-供应商-确认发货">4.4.1 供应商 确认发货</h3> <ul><li><p>地址: [put] /api/order/:id</p></li> <li><p>请求方式: <code>PUT</code></p></li> <li><p>参数:</p> <table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>id</td> <td>int 主键，修改时传</td> <td></td></tr> <tr><td>orderTime</td> <td>string 送达日期 (示例: 2020-01-16)</td> <td>是</td></tr> <tr><td>supplierId</td> <td>int 供应商id ([get] /api/info/school/supplier)</td> <td>是</td></tr> <tr><td>piecesnum</td> <td>int 订货件数</td> <td>是</td></tr> <tr><td>bulknum</td> <td>int 零散数量</td> <td>是</td></tr> <tr><td>num</td> <td>int 订货总数量(piecesnum*规格+bulknum)规格从供应商接口获取</td> <td>是</td></tr> <tr><td>orderer</td> <td>string 订货人</td> <td>是</td></tr> <tr><td>ordererphone</td> <td>string 订货人电话</td> <td>是</td></tr> <tr><td>lotnum</td> <td>string 产品批号</td> <td>是</td></tr> <tr><td>img</td> <td><code>Array&lt;string&gt;</code> 合格证图片 数组</td> <td>是</td></tr></tbody></table></li> <li><p>响应结果: <a href="#3-operatorresult">OperatorResult</a></p></li> <li><p>注意: 图片上传接口是: <code>/api/resource/upload</code></p></li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token comment">// 上传图片接口响应信息</span>
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;文件上传成功!!!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://27.128.229.171:8100/upload/5/img/5c0aa2a28214787d7c77f0bd6db05f43.jpg&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="5-教育局相关接口">5. 教育局相关接口</h2> <h3 id="511-学校上报情况/未上报列表">5.1.1 学校上报情况/未上报列表</h3> <ul><li>地址: [get] /api/report/school</li> <li>参数
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>formatTime</td> <td>string(示例: 2020-01-16) 查询日期</td> <td>是</td></tr> <tr><td>etime</td> <td>string(示例：2020-01-16)</td> <td></td></tr> <tr><td>formatTime</td> <td>string (示例：2020-01-16)</td> <td></td></tr></tbody></table></li> <li>响应:</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;msg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;成功&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span> 
+                <span class="token comment">// 可以参考 学校出库</span>
+                <span class="token comment">// id </span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1564</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;userid&quot;</span><span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;schoolid&quot;</span><span class="token operator">:</span> <span class="token number">71</span><span class="token punctuation">,</span>
+                <span class="token comment">// 学生食用牛奶数量</span>
+                <span class="token property">&quot;milk&quot;</span><span class="token operator">:</span> <span class="token number">1854</span><span class="token punctuation">,</span>
+                <span class="token comment">// 牛奶入库留样</span>
+                <span class="token property">&quot;mrkly&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token comment">// 牛奶加工后留样</span>
+                <span class="token property">&quot;mly&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token comment">// 牛奶试餐陪餐</span>
+                <span class="token property">&quot;mscpc&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                <span class="token comment">// 牛奶加工后破损数量</span>
+                <span class="token property">&quot;mjgps&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token comment">// 牛奶企业应补数量</span>
+                <span class="token property">&quot;mqyyb&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token comment">// 学生鸡蛋数量</span>
+                <span class="token property">&quot;egg&quot;</span><span class="token operator">:</span> <span class="token number">1615</span><span class="token punctuation">,</span>
+                <span class="token comment">// 鸡蛋入库留样数量</span>
+                <span class="token property">&quot;erkly&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token comment">// 鸡蛋加工后留样数量</span>
+                <span class="token property">&quot;ely&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                <span class="token comment">// 鸡蛋试餐陪餐数量</span>
+                <span class="token property">&quot;escpc&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+                <span class="token comment">// 鸡蛋加工破损数量</span>
+                <span class="token property">&quot;ejgps&quot;</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+                <span class="token comment">// 鸡蛋企业应补数量</span>
+                <span class="token property">&quot;eqyyb&quot;</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;year&quot;</span><span class="token operator">:</span> <span class="token number">2020</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;month&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;day&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token comment">// 日期 同 参数里的 formatTime</span>
+                <span class="token property">&quot;formatTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-01&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;remark&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;createTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-01 16:33:15&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;updateTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-01 16:33:15&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;eggOutBefore&quot;</span><span class="token operator">:</span> <span class="token number">7396</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;eggOutAfter&quot;</span><span class="token operator">:</span> <span class="token number">5751</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;milkOutBefore&quot;</span><span class="token operator">:</span> <span class="token number">12491</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;milkOutAfter&quot;</span><span class="token operator">:</span> <span class="token number">10635</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;stime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;etime&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;schoolname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;剑桥小学&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;totalEggOut&quot;</span><span class="token operator">:</span> <span class="token number">1645</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;totalMilkOut&quot;</span><span class="token operator">:</span> <span class="token number">1856</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;otherData&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;total&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token comment">// formatTime日期 鸡蛋总数量</span>
+                <span class="token property">&quot;egg&quot;</span><span class="token operator">:</span> <span class="token number">1645</span><span class="token punctuation">,</span>
+                <span class="token comment">// formatTime日期 牛奶总数量</span>
+                <span class="token property">&quot;milk&quot;</span><span class="token operator">:</span> <span class="token number">1856</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token comment">// 未上报学校 列表</span>
+            <span class="token property">&quot;notReported&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;schoolname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;实验小学&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;address&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;schooltype&quot;</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;remark&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+                <span class="token punctuation">}</span>
+                ......
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="520-mealstock">5.2.0 meal_stock</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">55</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;schoolId&quot;</span><span class="token operator">:</span> <span class="token number">53</span><span class="token punctuation">,</span>
+    <span class="token comment">// 鸡蛋库存</span>
+    <span class="token property">&quot;stockEgg&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token comment">// 牛奶库存</span>
+    <span class="token property">&quot;stockMilk&quot;</span><span class="token operator">:</span> <span class="token number">29</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;createTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-10-10 00:00:00&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;updateTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-03 16:18:12&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 学校名称</span>
+    <span class="token property">&quot;schoolename&quot;</span><span class="token operator">:</span> <span class="token string">&quot;西达屯小学&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="521-学校实时库存">5.2.1 学校实时库存</h3> <ul><li>地址: [get] /api/mealStock/stock</li> <li>参数:
+<table><thead><tr><th>参数名称</th> <th>参数类型</th> <th>是否必填</th></tr></thead> <tbody><tr><td>schoolName</td> <td>string 学校名称</td> <td></td></tr></tbody></table></li> <li>响应: <a href="#1-listresultt">ListResult</a>&lt;<a href="#520-mealstock">meal_stock</a>&gt;</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/api-doc-html/assets/js/app.aee9f5d9.js" defer></script><script src="/api-doc-html/assets/js/2.d939bcfd.js" defer></script><script src="/api-doc-html/assets/js/5.27009213.js" defer></script>
+  </body>
+</html>
